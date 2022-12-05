@@ -107,7 +107,7 @@ if option == 'Energy':
 else:
     plt.ylabel('Runtime (min)')
 plt.xlabel('Language', size=6)
-plt.rcParams["font.size"] = 6
+plt.rcParams["font.size"] = 5.5
 ax.vlines(sorted_group_labels, 0, sorted_hist_data, label=['test', 'test23'], color=['C0',
                                                                                      'C1', 'C2', 'C3', 'C4', 'C5', 'C6',
                                                                                      'C7', 'C8', 'C9'])
