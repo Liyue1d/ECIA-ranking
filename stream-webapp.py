@@ -115,10 +115,10 @@ st.pyplot(fig)
 
 "LEGEND"
 
-leg = "Rst: Rust | Jav: Java | Chp: Chapel | Psc: Pascal | Ocl: Ocaml | Lsp: Lisp |Hsk: Hask |" \
+leg = "Rst: Rust" +  st.markdown('#') + "Jav: Java | Chp: Chapel | Psc: Pascal | Ocl: Ocaml | Lsp: Lisp |Hsk: Hask |" \
       " Swif: Swift |For: Fortran | JS: JavaScript | Drt: Dart | Rck: Rack | Hck: Hack |" \
       " Erl: Erlang | Jrb: Jruby | TS: TypeScript | Rub: Ruby | Prl: Perl | Pyt: Python" \
-      " | SWI: SWI-Prolog | SIC: SICStus Prolog".replace('|', '\~ ')
+      " | SWI: SWI-Prolog | SIC: SICStus Prolog"
 
 
 leg
