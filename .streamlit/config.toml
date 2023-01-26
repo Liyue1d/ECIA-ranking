@@ -1,0 +1,3 @@
+[browser]
+serverAddress = "https://talan-research-ecia.francecentral.cloudapp.azure.com"
+serverPort = 8501
