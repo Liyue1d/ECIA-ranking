@@ -16,13 +16,13 @@ st.set_page_config(page_title="Consommation énergétique Modèle de ML", page_i
 st.title("Consommation énergétique")
 
 # Inputs de l'utilisateur
-input1 = st.number_input("Taille Dataset")
-input2 = st.number_input("Nombre de Batch")
-input3 = st.number_input("Nombre de parametres")
+input1 = st.number_input("Taille Dataset", format='%d', step=1)
+input2 = st.number_input("Nombre de Batch", format='%d', step=1)
+input3 = st.number_input("Nombre de parametres", format='%d', step=1)
 
-input1 = float(input1)
-input2 = float(input2)
-input3 = float(input3)
+input1 = int(input1)
+input2 = int(input2)
+input3 = int(input3)
 
 # Normaliser les inputs de l'utilisateur avec le scaler
 new_data = pd.DataFrame([[input1, input2, input3]], columns=column_names)
