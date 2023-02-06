@@ -51,7 +51,7 @@ st.markdown(
 st.title("Consommation énergétique")
 
 input1 = st.number_input("Taille Dataset", value=0, step=1000)
-input2 = st.number_input("Nombre de Batch", value=0, step=2)
+input2 = st.number_input("Taille du Batch", value=0, step=2)
 input3 = st.number_input("Nombre de parametres", value=0, step=10000)
 
 input1 = float(input1)
