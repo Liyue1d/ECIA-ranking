@@ -69,4 +69,4 @@ def get_prediction(inputs_scaled):
 
 if st.button("Calculer"):
     prediction = get_prediction(inputs_scaled)
-    st.write("La consommation énergétique sera de ", round(prediction[0], 2), " mwh")
+    st.write("La consommation énergétique sera de ", prediction[0], " mwh")
