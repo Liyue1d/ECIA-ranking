@@ -66,7 +66,7 @@ input3 = float(input3)
 def get_prediction(inputs):
     #return loaded_model.predict(inputs_scaled)
     w0 = 0.0036
-    w1 = - 0.054
+    w1 = - 0.084
     w2 = 7.4e-05
 
     return w0 * inputs[0] + w1 * inputs[1] + w2 * inputs[2]
