@@ -5,7 +5,7 @@ import pandas as pd
 from PIL import Image
 
 # Load the pre-trained model
-loaded_model = pickle.load(open("best_model_2.pkl", "rb"))
+#loaded_model = pickle.load(open("best_model_2.pkl", "rb"))
 
 # Load the scaler
 with open('scaler_2.pkl', 'rb') as f:
@@ -58,15 +58,21 @@ input1 = float(input1)
 input2 = float(input2)
 input3 = float(input3)
 
-new_data = pd.DataFrame([[input1, input2, input3]], columns=column_names)
-inputs_scaled = scaler.transform(new_data)
+#new_data = pd.DataFrame([[input1, input2, input3]], columns=column_names)
+#inputs_scaled = scaler.transform(new_data)
 
 
 @st.cache
-def get_prediction(inputs_scaled):
-    return loaded_model.predict(inputs_scaled)
+def get_prediction(inputs):
+    #return loaded_model.predict(inputs_scaled)
+    w0 = 0.0036
+    w1 = - 0.054
+    w2 = 7.4e-05
+
+    return w0 * inputs[0] + w1 * inputs[1] + w2 * inputs[2]
 
 
 if st.button("Calculer"):
-    prediction = get_prediction(inputs_scaled)
+    prediction = get_prediction([input1, input2, input3])
+    #prediction = get_prediction(inputs_scaled)
     st.write("La consommation énergétique sera de ", prediction[0], " mwh")
